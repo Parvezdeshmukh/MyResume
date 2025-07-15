@@ -1,1403 +1,991 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Index - MyResume Bootstrap Template</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muqeeem Quazi | Graphic Designer & Video Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Vendor CSS Files -->
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
       rel="stylesheet"
     />
     <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
-
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet" />
-
-    <!-- =======================================================
-  * Template Name: MyResume
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#4f46e5",
+              secondary: "#10b981",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-image: url("./assetes/images/beautiful-landscape-with-mountains-blue-sky.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+      }
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .heading-font {
+        font-family: "Montserrat", sans-serif;
+      }
+      .hero-gradient {
+        background: linear-gradient(135deg, #4f46e5 0%, #10b981 100%);
+      }
+      .project-card:hover .project-overlay {
+        opacity: 1;
+      }
+      .skill-icon {
+        transition: all 0.3s ease;
+      }
+      .skill-icon:hover {
+        transform: translateY(-5px);
+      }
+      input:focus,
+      textarea:focus,
+      select:focus {
+        outline: none;
+        border-color: #4f46e5;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+      }
+      .custom-checkbox {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #d1d5db;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+      }
+      .custom-checkbox:checked {
+        background-color: #4f46e5;
+        border-color: #4f46e5;
+      }
+      .custom-checkbox:checked::after {
+        content: "";
+        position: absolute;
+        top: 3px;
+        left: 6px;
+        width: 6px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+      .hamburger-menu {
+        display: none;
+      }
+      @media (max-width: 768px) {
+        .desktop-menu {
+          display: none;
+        }
+        .hamburger-menu {
+          display: block;
+        }
+      }
+    </style>
   </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-50">
+      <div
+        class="container mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <a href="#home" id="logo-link" class="h-8 flex items-center">
+          <img
+            src="https://static.readdy.ai/image/76011a86731a26fbcd7ef0306ff771aa/bb7f33d02faae73f7a0abc470fdd2ba9.png"
+            alt="MQ Logo"
+            class="h-full"
+          />
+        </a>
+        <nav class="desktop-menu">
+          <ul class="flex items-center space-x-8">
+            <li>
+              <a
+                href="#home"
+                class="text-gray-800 hover:text-primary transition-colors"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="text-gray-800 hover:text-primary transition-colors"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#projects"
+                class="text-gray-800 hover:text-primary transition-colors"
+                >Projects</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contact"
+                class="text-gray-800 hover:text-primary transition-colors"
+                >Contact</a
+              >
+            </li>
+           <li>
+  <a
+    href="https://wa.me/917385905203"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-600 transition-colors"
+  >
+    Hire Me
+  </a>
+</li>
 
-  <body class="index-page">
-    <header
-      id="header"
-      class="header d-flex flex-column justify-content-center"
+          </ul>
+        </nav>
+        <div
+          class="hamburger-menu w-8 h-8 flex items-center justify-center cursor-pointer"
+        >
+          <i class="ri-menu-line text-gray-800 text-2xl"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out"
     >
-      <i class="header-toggle d-xl-none bi bi-list"></i>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
+      <div class="container mx-auto px-6 py-4 flex justify-end">
+        <div
+          class="w-8 h-8 flex items-center justify-center cursor-pointer"
+          id="close-menu"
+        >
+          <i class="ri-close-line text-gray-800 text-2xl"></i>
+        </div>
+      </div>
+      <nav class="container mx-auto px-6 py-8">
+        <ul class="flex flex-col space-y-6">
           <li>
-            <a href="#hero" class="active"
-              ><i class="bi bi-house navicon"></i><span>Home</span></a
+            <a
+              href="#home"
+              class="text-xl text-gray-800 hover:text-primary transition-colors"
+              >Home</a
             >
           </li>
           <li>
-            <a href="#about"
-              ><i class="bi bi-person navicon"></i><span>About</span></a
+            <a
+              href="#about"
+              class="text-xl text-gray-800 hover:text-primary transition-colors"
+              >About</a
             >
           </li>
           <li>
-            <a href="#resume"
-              ><i class="bi bi-file-earmark-text navicon"></i
-              ><span>Resume</span></a
+            <a
+              href="#projects"
+              class="text-xl text-gray-800 hover:text-primary transition-colors"
+              >Projects</a
             >
           </li>
           <li>
-            <a href="#portfolio"
-              ><i class="bi bi-images navicon"></i><span>Portfolio</span></a
+            <a
+              href="#contact"
+              class="text-xl text-gray-800 hover:text-primary transition-colors"
+              >Contact</a
             >
           </li>
           <li>
-            <a href="#services"
-              ><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a
-            >
-          </li>
-          <li>
-            <a href="#contact"
-              ><i class="bi bi-envelope navicon"></i><span>Contact</span></a
+            <a
+              href="#contact"
+              class="inline-block bg-primary text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-indigo-600 transition-colors"
+              >Hire Me</a
             >
           </li>
         </ul>
       </nav>
-    </header>
-
-    <main class="main">
-      <!-- Hero Section -->
-      <section id="hero" class="hero section light-background">
-        <img src="assets/img/mukeem.png" alt="" />
-
-        <div class="container" data-aos="zoom-out">
-          <div class="row justify-content-center">
-            <div class="col-lg-9">
-              <h2>Muqeem Quazi</h2>
-              <p>
-                I'm
-                <span
-                  class="typed"
-                  data-typed-items="Designer, Editor, Freelancer, Photographer"
-                  >Designer</span
-                ><span
-                  class="typed-cursor typed-cursor--blink"
-                  aria-hidden="true"
-                ></span>
-              </p>
-              <div class="social-links">
-                <a href="#"><i class="bi bi-twitter-x"></i></a>
-                <a href="#"><i class="bi bi-facebook"></i></a>
-                <a href="#"><i class="bi bi-instagram"></i></a>
-                <a href="#"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Hero Section -->
-
-      <!-- About Section -->
-      <section id="about" class="about section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>About</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 justify-content-center">
-            <div class="col-lg-4">
-              <img src="assets/img/profile-img.jpg" class="img-fluid" alt="" />
-            </div>
-            <div class="col-lg-8 content">
-              <h2>UI/UX Designer &amp; Web Developer.</h2>
-              <p class="fst-italic py-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Birthday:</strong> <span>1 May 1995</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Website:</strong> <span>www.example.com</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Phone:</strong> <span>+123 456 7890</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>City:</strong> <span>New York, USA</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li>
-                      <i class="bi bi-chevron-right"></i> <strong>Age:</strong>
-                      <span>30</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Degree:</strong> <span>Master</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Email:</strong> <span>email@example.com</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-chevron-right"></i>
-                      <strong>Freelance:</strong> <span>Available</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <p class="py-3">
-                Officiis eligendi itaque labore et dolorum mollitia officiis
-                optio vero. Quisquam sunt adipisci omnis et ut. Nulla
-                accusantium dolor incidunt officia tempore. Et eius omnis.
-                Cupiditate ut dicta maxime officiis quidem quia. Sed et
-                consectetur qui quia repellendus itaque neque.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /About Section -->
-
-      <!-- Stats Section -->
-      <section id="stats" class="stats section">
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4">
-            <div
-              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
-            >
-              <i class="bi bi-emoji-smile"></i>
-              <div class="stats-item">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="232"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Happy Clients</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
-            >
-              <i class="bi bi-journal-richtext"></i>
-              <div class="stats-item">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="521"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Projects</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
-            >
-              <i class="bi bi-headset"></i>
-              <div class="stats-item">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="1463"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Hours Of Support</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-
-            <div
-              class="col-lg-3 col-md-6 d-flex flex-column align-items-center"
-            >
-              <i class="bi bi-people"></i>
-              <div class="stats-item">
-                <span
-                  data-purecounter-start="0"
-                  data-purecounter-end="15"
-                  data-purecounter-duration="1"
-                  class="purecounter"
-                ></span>
-                <p>Hard Workers</p>
-              </div>
-            </div>
-            <!-- End Stats Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Stats Section -->
-
-      <!-- Skills Section -->
-      <section id="skills" class="skills section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Skills</h2>
-          <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row skills-content skills-animation">
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>HTML</span> <i class="val">100%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="100"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>CSS</span> <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>JavaScript</span> <i class="val">75%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="75"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-            </div>
-
-            <div class="col-lg-6">
-              <div class="progress">
-                <span class="skill"
-                  ><span>PHP</span> <i class="val">80%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="80"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>WordPress/CMS</span> <i class="val">90%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="90"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-
-              <div class="progress">
-                <span class="skill"
-                  ><span>Photoshop</span> <i class="val">55%</i></span
-                >
-                <div class="progress-bar-wrap">
-                  <div
-                    class="progress-bar"
-                    role="progressbar"
-                    aria-valuenow="55"
-                    aria-valuemin="0"
-                    aria-valuemax="100"
-                  ></div>
-                </div>
-              </div>
-              <!-- End Skills Item -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Skills Section -->
-
-      <!-- Resume Section -->
-      <section id="resume" class="resume section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Resume</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="resume-title">Sumary</h3>
-
-              <div class="resume-item pb-0">
-                <h4>Brandon Johnson</h4>
-                <p>
-                  <em
-                    >Innovative and deadline-driven Graphic Designer with 3+
-                    years of experience designing and developing user-centered
-                    digital/print marketing material from initial concept to
-                    final, polished deliverable.</em
-                  >
-                </p>
-                <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
-                </ul>
-              </div>
-              <!-- Edn Resume Item -->
-
-              <h3 class="resume-title">Education</h3>
-              <div class="resume-item">
-                <h4>Master of Fine Arts &amp; Graphic Design</h4>
-                <h5>2015 - 2016</h5>
-                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                <p>
-                  Qui deserunt veniam. Et sed aliquam labore tempore sed
-                  quisquam iusto autem sit. Ea vero voluptatum qui ut
-                  dignissimos deleniti nerada porti sand markend
-                </p>
-              </div>
-              <!-- Edn Resume Item -->
-
-              <div class="resume-item">
-                <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-                <h5>2010 - 2014</h5>
-                <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-                <p>
-                  Quia nobis sequi est occaecati aut. Repudiandae et iusto quae
-                  reiciendis et quis Eius vel ratione eius unde vitae rerum
-                  voluptates asperiores voluptatem Earum molestiae consequatur
-                  neque etlon sader mart dila
-                </p>
-              </div>
-              <!-- Edn Resume Item -->
-            </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <h3 class="resume-title">Professional Experience</h3>
-              <div class="resume-item">
-                <h4>Senior graphic design specialist</h4>
-                <h5>2019 - Present</h5>
-                <p><em>Experion, New York, NY </em></p>
-                <ul>
-                  <li>
-                    Lead in the design, development, and implementation of the
-                    graphic, layout, and production communication materials
-                  </li>
-                  <li>
-                    Delegate tasks to the 7 members of the design team and
-                    provide counsel on all aspects of the project.
-                  </li>
-                  <li>
-                    Supervise the assessment of all graphic materials in order
-                    to ensure quality and accuracy of the design
-                  </li>
-                  <li>
-                    Oversee the efficient use of production project budgets
-                    ranging from $2,000 - $25,000
-                  </li>
-                </ul>
-              </div>
-              <!-- Edn Resume Item -->
-
-              <div class="resume-item">
-                <h4>Graphic design specialist</h4>
-                <h5>2017 - 2018</h5>
-                <p><em>Stepping Stone Advertising, New York, NY</em></p>
-                <ul>
-                  <li>
-                    Developed numerous marketing programs (logos,
-                    brochures,infographics, presentations, and advertisements).
-                  </li>
-                  <li>
-                    Managed up to 5 projects or tasks at a given time while
-                    under pressure
-                  </li>
-                  <li>
-                    Recommended and consulted with clients on the most
-                    appropriate graphic design
-                  </li>
-                  <li>
-                    Created 4+ design presentations and proposals a month for
-                    clients and account managers
-                  </li>
-                </ul>
-              </div>
-              <!-- Edn Resume Item -->
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- /Resume Section -->
-
-      <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Portfolio</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div
-            class="isotope-layout"
-            data-default-filter="*"
-            data-layout="masonry"
-            data-sort="original-order"
+    </div>
+    <!-- Hero Section -->
+   <section id="home" class="pt-24 relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-gray-900/40"></div>
+  <div class="container mx-auto px-6 py-20 md:py-32 relative z-10">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="w-full md:w-1/2 text-center md:text-left mb-12 md:mb-0">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white heading-font mb-4">
+          Muqeeem Quazi
+        </h1>
+        <h2 class="text-xl md:text-2xl font-medium text-white/90 mb-6 h-10">
+          <span id="typewriter-text"></span>
+          <span class="border-r-2 border-white animate-pulse ml-1"></span>
+        </h2>
+        <p class="text-lg text-white/80 mb-8 max-w-lg mx-auto md:mx-0">
+          Creating visual stories that leave lasting impressions.
+          Transforming ideas into captivating visual experiences that
+          resonate with audiences.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a
+            href="#projects"
+            class="bg-primary text-white px-8 py-3 !rounded-button whitespace-nowrap hover:bg-indigo-600 transition-colors font-medium"
+            >View My Work</a
           >
-            <ul
-              class="portfolio-filters isotope-filters"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-product">Card</li>
-              <li data-filter=".filter-branding">Web</li>
-            </ul>
-            <!-- End Portfolio Filters -->
+          <a
+            href="#contact"
+            class="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-3 !rounded-button whitespace-nowrap hover:bg-white/20 transition-colors font-medium"
+            >Let's Connect</a
+          >
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20">
+          <img
+            src="./assetes/images/photo_2024-01-11_15-19-39.jpg"
+            alt="Muqeeem Quazi"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
+<script>
+  const roles = [
+    "Graphic Designer",
+    "Video Editor",
+    "Motion Artist",
+    "Creative Thinker"
+  ];
+
+  const el = document.getElementById("typewriter-text");
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const current = roles[wordIndex];
+    const display = current.substring(0, charIndex);
+    el.innerText = display;
+
+    if (!isDeleting && charIndex < current.length) {
+      charIndex++;
+      setTimeout(type, 100);
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) wordIndex = (wordIndex + 1) % roles.length;
+      setTimeout(type, 1000);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", type);
+</script>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold heading-font text-gray-900 mb-4"
+          >
+            About Me
+          </h2>
+          <div class="w-20 h-1 bg-primary mx-auto"></div>
+        </div>
+        <div class="flex flex-col md:flex-row items-center gap-12">
+          <div class="w-full md:w-2/5">
+            <div class="relative rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="https://readdy.ai/api/search-image?query=creative%20professional%20South%20Asian%20male%20in%20a%20design%20studio%20environment%2C%20working%20on%20a%20computer%20with%20design%20software%2C%20surrounded%20by%20creative%20elements%2C%20side%20view%2C%20professional%20lighting%2C%20modern%20workspace%20with%20design%20elements%20visible%2C%208k%20quality&width=800&height=1000&seq=about1&orientation=portrait"
+                alt="Muqeeem Quazi at work"
+                class="w-full h-auto"
+              />
               <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
+                class="absolute inset-0 bg-gradient-to-t from-gray-900/70 to-transparent flex items-end"
               >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-1.jpg"
-                    title="App 1"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
+                <div class="p-6">
+                  <div class="flex gap-4">
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors"
+                    >
+                      <i class="ri-linkedin-fill"></i>
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors"
+                    >
+                      <i class="ri-instagram-line"></i>
+                    </a>
+                    <a
+                      href="https://behance.net"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-primary transition-colors"
+                    >
+                      <i class="ri-behance-fill"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-2.jpg"
-                    title="Product 1"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-3.jpg"
-                    title="Branding 1"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-4.jpg"
-                    title="App 2"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Product 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-5.jpg"
-                    title="Product 2"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Branding 2</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-6.jpg"
-                    title="Branding 2"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>App 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-7.jpg"
-                    title="App 3"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Product 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-8.jpg"
-                    title="Product 3"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-4 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img
-                  src="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Branding 3</h4>
-                  <p>Lorem ipsum, dolor sit</p>
-                  <a
-                    href="assets/img/masonry-portfolio/masonry-portfolio-9.jpg"
-                    title="Branding 2"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
             </div>
-            <!-- End Portfolio Container -->
+          </div>
+          <div class="w-full md:w-3/5">
+            <h3 class="text-2xl font-semibold heading-font text-gray-900 mb-4">
+              Creative Professional with a Passion for Visual Storytelling
+            </h3>
+            <p class="text-gray-700 mb-6">
+              With over 8 years of experience in the creative industry, I
+              specialize in crafting compelling visual narratives through
+              graphic design and video editing. My work combines technical
+              precision with artistic vision to deliver impactful results that
+              connect with audiences and elevate brands.
+            </p>
+            <p class="text-gray-700 mb-8">
+              Based in Mumbai, I've collaborated with clients across various
+              industries including technology, entertainment, and education. My
+              approach focuses on understanding client objectives and
+              translating them into visually stunning and effective solutions.
+            </p>
+            <div class="mb-8">
+              <h4 class="text-lg font-semibold heading-font text-gray-900 mb-4">
+                My Expertise
+              </h4>
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-icon flex flex-col items-center">
+                  <div
+                    class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-3"
+                  >
+                    <i class="ri-paint-brush-line text-primary text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 font-medium">Graphic Design</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center">
+                  <div
+                    class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-3"
+                  >
+                    <i class="ri-movie-2-line text-primary text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 font-medium">Video Editing</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center">
+                  <div
+                    class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-3"
+                  >
+                    <i class="ri-slideshow-line text-primary text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 font-medium">Motion Graphics</span>
+                </div>
+                <div class="skill-icon flex flex-col items-center">
+                  <div
+                    class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-3"
+                  >
+                    <i class="ri-magic-line text-primary text-2xl"></i>
+                  </div>
+                  <span class="text-gray-800 font-medium">Visual Effects</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold heading-font text-gray-900 mb-4">
+                Experience Highlights
+              </h4>
+              <div class="space-y-4">
+                <div class="flex">
+                  <div class="w-1 bg-primary rounded-full mr-4"></div>
+                  <div>
+                    <h5 class="font-medium text-gray-900">
+                      Senior Visual Designer
+                    </h5>
+                    <p class="text-gray-600 text-sm">
+                      CreativeVision Studios • 2022 - Present
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="w-1 bg-gray-300 rounded-full mr-4"></div>
+                  <div>
+                    <h5 class="font-medium text-gray-900">
+                      Video Editor & Motion Designer
+                    </h5>
+                    <p class="text-gray-600 text-sm">
+                      MediaCraft Productions • 2019 - 2022
+                    </p>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="w-1 bg-gray-300 rounded-full mr-4"></div>
+                  <div>
+                    <h5 class="font-medium text-gray-900">Graphic Designer</h5>
+                    <p class="text-gray-600 text-sm">
+                      PixelPerfect Agency • 2017 - 2019
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
-      <!-- /Portfolio Section -->
+      </div>
+    </section>
+    <!-- Projects Section -->
+ <section id="projects" class="py-20 text-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold heading-font mb-4">Featured Projects</h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        A selection of my recent work across graphic design, video editing, and motion graphics.
+      </p>
+      <div class="w-20 h-1 bg-indigo-100 mx-auto mt-4"></div>
+    </div>
 
-      <!-- Services Section -->
-      <section id="services" class="services section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Services</h2>
-          <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+    <!-- Filter Buttons -->
+    <div class="flex justify-center mb-10">
+      <div class="inline-flex bg-gray-100 p-1 rounded-full">
+        <button class="filter-btn active px-6 py-2 rounded-full bg-primary text-white">All Projects</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-gray-700">Graphics</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-gray-700">Videos</button>
+        <button class="filter-btn px-6 py-2 rounded-full text-gray-700">Motion Design</button>
+      </div>
+    </div>
+
+    <!-- Project Grid will be generated by JS -->
+    <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center text-white font-medium hover:text-indigo-400 transition-colors">
+        View All Projects
+        <i class="ri-arrow-right-line ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
+<script>
+  const projects = [
+    {
+      title: "Graphic Project 1",
+      category: "graphics",
+      image: "https://source.unsplash.com/800x600/?graphic,design",
+      label: "Graphic Design"
+    },
+    {
+      title: "Video Project",
+      category: "videos",
+      image: "https://source.unsplash.com/800x600/?video,editing",
+      label: "Video Editing"
+    },
+    {
+      title: "Motion Project",
+      category: "motion design",
+      image: "https://source.unsplash.com/800x600/?motion,graphics",
+      label: "Motion Design"
+    },
+    {
+      title: "Graphic Project 2",
+      category: "graphics",
+      image: "https://source.unsplash.com/800x600/?branding,identity",
+      label: "Graphic Design"
+    },
+    {
+      title: "Motion Intro",
+      category: "motion design",
+      image: "https://source.unsplash.com/800x600/?animation,intro",
+      label: "Motion Design"
+    },
+    {
+      title: "Promo Video",
+      category: "videos",
+      image: "https://source.unsplash.com/800x600/?film,production",
+      label: "Video Editing"
+    }
+  ];
+
+  function renderProjects(selectedCategory = "all projects") {
+    const grid = document.getElementById("project-grid");
+    grid.innerHTML = "";
+
+    const filtered = selectedCategory === "all projects"
+      ? projects
+      : projects.filter(p => p.category === selectedCategory);
+
+    filtered.forEach(project => {
+      const card = document.createElement("div");
+      card.className = `project-card group rounded-lg overflow-hidden shadow-xl shadow-red-100/50`;
+      card.setAttribute("data-category", project.category);
+
+      card.innerHTML = `
+        <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover" />
+        <div class="p-6 bg-gray-800">
+          <span class="text-sm text-indigo-300 font-medium">${project.label}</span>
+          <h3 class="text-xl font-semibold text-gray-200 mt-2 mb-2">${project.title}</h3>
+        </div>
+      `;
+
+      grid.appendChild(card);
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+
+    // Initial render
+    renderProjects();
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        // Button styling
+        filterButtons.forEach(b => {
+          b.classList.remove("bg-primary", "text-white", "active");
+          b.classList.add("text-gray-700");
+        });
+        btn.classList.add("bg-primary", "text-white", "active");
+        btn.classList.remove("text-gray-700");
+
+        // Filter projects
+        const selected = btn.textContent.trim().toLowerCase();
+        renderProjects(selected);
+      });
+    });
+  });
+</script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2
+            class="text-3xl md:text-4xl font-bold heading-font text-gray-900 mb-4"
+          >
+            Let's Work Together
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Have a project in mind? Let's discuss how I can help bring your
+            vision to life.
           </p>
+          <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
         </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="service-item item-cyan position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-activity"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Nesciunt Mete</h3>
-                </a>
-                <p>
-                  Provident nihil minus qui consequatur non omnis maiores. Eos
-                  accusantium minus dolores iure perferendis tempore et
-                  consequatur.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="service-item item-orange position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-broadcast"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Eosle Commodi</h3>
-                </a>
-                <p>
-                  Ut autem aut autem non a. Sint sint sit facilis nam iusto
-                  sint. Libero corrupti neque eum hic non ut nesciunt dolorem.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="service-item item-teal position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-easel"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Ledo Markt</h3>
-                </a>
-                <p>
-                  Ut excepturi voluptatem nisi sed. Quidem fuga consequatur.
-                  Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.
-                </p>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="service-item item-red position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,503.46388370962813C374.79870501325706,506.71871716319447,464.8034551963731,527.1746412648533,510.4981551193396,467.86667711651364C555.9287308511215,408.9015244558933,512.6030010748507,327.5744911775523,490.211057578863,256.5855673507754C471.097692560561,195.9906835881958,447.69079081568157,138.11976852964426,395.19560036434837,102.3242989838813C329.3053358748298,57.3949838291264,248.02791733380457,8.279543830951368,175.87071277845988,42.242879143198664C103.41431057327972,76.34704239035025,93.79494320519305,170.9812938413882,81.28167332365135,250.07896920659033C70.17666984294237,320.27484674793965,64.84698225790005,396.69656628748305,111.28512138212992,450.4950937839243C156.20124167950087,502.5303643271138,231.32542653798444,500.4755392045468,300,503.46388370962813"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-bounding-box-circles"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Asperiores Commodit</h3>
-                </a>
-                <p>
-                  Non et temporibus minus omnis sed dolor esse consequatur.
-                  Cupiditate sed error ea fuga sit provident adipisci neque.
-                </p>
-                <a href="#" class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="service-item item-indigo position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,532.3542879108572C369.38199826031484,532.3153073249985,429.10787420159085,491.63046689027357,474.5244479745417,439.17860296908856C522.8885846962883,383.3225815378663,569.1668002868075,314.3205725914397,550.7432151929288,242.7694973846089C532.6665558377875,172.5657663291529,456.2379748765914,142.6223662098291,390.3689995646985,112.34683881706744C326.66090330228417,83.06452184765237,258.84405631176094,53.51806209861945,193.32584062364296,78.48882559362697C121.61183558270385,105.82097193414197,62.805066853699245,167.19869350419734,48.57481801355237,242.6138429142374C34.843463184063346,315.3850353017275,76.69343916112496,383.4422959591041,125.22947124332185,439.3748458443577C170.7312796277747,491.8107796887764,230.57421082200815,532.3932930995766,300,532.3542879108572"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-calendar4-week icon"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Velit Doloremque</h3>
-                </a>
-                <p>
-                  Cumque et suscipit saepe. Est maiores autem enim facilis ut
-                  aut ipsam corporis aut. Sed animi at autem alias eius labore.
-                </p>
-                <a href="#" class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-
-            <div
-              class="col-lg-4 col-md-6"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="service-item item-pink position-relative">
-                <div class="icon">
-                  <svg
-                    width="100"
-                    height="100"
-                    viewBox="0 0 600 600"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke="none"
-                      stroke-width="0"
-                      fill="#f5f5f5"
-                      d="M300,566.797414625762C385.7384707136149,576.1784315230908,478.7894351017131,552.8928747891023,531.9192734346935,484.94944893311C584.6109503024035,417.5663521118492,582.489472248146,322.67544863468447,553.9536738515405,242.03673114598146C529.1557734026468,171.96086150256528,465.24506316201064,127.66468636344209,395.9583748389544,100.7403814666027C334.2173773831606,76.7482773500951,269.4350130405921,84.62216499799875,207.1952322260088,107.2889140133804C132.92018162631612,134.33871894543012,41.79353780512637,160.00259165414826,22.644507872594943,236.69541883565114C3.319112789854554,314.0945973066697,72.72355303640163,379.243833228382,124.04198916343866,440.3218312028393C172.9286146004772,498.5055451809895,224.45579914871206,558.5317968840102,300,566.797414625762"
-                    ></path>
-                  </svg>
-                  <i class="bi bi-chat-square-text"></i>
-                </div>
-                <a href="#" class="stretched-link">
-                  <h3>Dolori Architecto</h3>
-                </a>
-                <p>
-                  Hic molestias ea quibusdam eos. Fugiat enim doloremque aut
-                  neque non et debitis iure. Corrupti recusandae ducimus enim.
-                </p>
-                <a href="#" class="stretched-link"></a>
-              </div>
-            </div>
-            <!-- End Service Item -->
-          </div>
-        </div>
-      </section>
-      <!-- /Services Section -->
-
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="testimonials section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Testimonials</h2>
-          <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper init-swiper">
-            <script type="application/json" class="swiper-config">
-              {
-                "loop": true,
-                "speed": 600,
-                "autoplay": {
-                  "delay": 5000
-                },
-                "slidesPerView": "auto",
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "type": "bullets",
-                  "clickable": true
-                }
-              }
-            </script>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Proin iaculis purus consequat sem cure digni ssim
-                            donec porttitora entum suscipit rhoncus. Accusantium
-                            quam, ultricies eget id, aliquam eget nibh et.
-                            Maecen aliquam, risus at semper.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Saul Goodman</h3>
-                        <h4>Ceo &amp; Founder</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="flex flex-col md:flex-row">
+              <div class="w-full md:w-2/5 bg-primary p-8 text-white">
+                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 mr-4 flex-shrink-0"
+                    >
+                      <i class="ri-mail-line text-white"></i>
                     </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/testimonials/testimonials-1.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
+                    <div>
+                      <h4 class="text-white/80 text-sm mb-1">Email</h4>
+                      <p class="font-medium">muqeeem.quazi@example.com</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 mr-4 flex-shrink-0"
+                    >
+                      <i class="ri-map-pin-line text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-white/80 text-sm mb-1">Location</h4>
+                      <p class="font-medium">Mumbai, India</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 mr-4 flex-shrink-0"
+                    >
+                      <i class="ri-time-line text-white"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-white/80 text-sm mb-1">Working Hours</h4>
+                      <p class="font-medium">Monday - Friday, 9AM - 6PM IST</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-12">
+                  <h4 class="text-lg font-medium mb-4">Connect With Me</h4>
+                  <div class="flex space-x-4">
+                    <a
+                      href="https://linkedin.com"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <i class="ri-linkedin-fill text-white"></i>
+                    </a>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <i class="ri-instagram-line text-white"></i>
+                    </a>
+                    <a
+                      href="https://behance.net"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <i class="ri-behance-fill text-white"></i>
+                    </a>
+                    <a
+                      href="https://dribbble.com"
+                      target="_blank"
+                      class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors"
+                    >
+                      <i class="ri-dribbble-line text-white"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-3/5 p-8">
+                <form id="contact-form">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <label
+                        for="name"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Full Name</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded text-gray-800"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-sm font-medium text-gray-700 mb-2"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded text-gray-800"
+                        placeholder="your.email@example.com"
                       />
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Export tempor illum tamen malis malis eram quae
-                            irure esse labore quem cillum quid cillum eram malis
-                            quorum velit fore eram velit sunt aliqua noster
-                            fugiat irure amet legam anim culpa.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Sara Wilsson</h3>
-                        <h4>Designer</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
+                  <div class="mb-6">
+                    <label
+                      for="project-type"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Project Type</label
+                    >
+                    <div class="relative">
+                      <select
+                        id="project-type"
+                        name="project-type"
+                        class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded text-gray-800 appearance-none pr-8"
+                      >
+                        <option value="" disabled selected>
+                          Select project type
+                        </option>
+                        <option value="graphic-design">Graphic Design</option>
+                        <option value="video-editing">Video Editing</option>
+                        <option value="motion-graphics">Motion Graphics</option>
+                        <option value="visual-effects">Visual Effects</option>
+                        <option value="other">Other</option>
+                      </select>
+                      <div
+                        class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none"
+                      >
+                        <i class="ri-arrow-down-s-line text-gray-500"></i>
                       </div>
                     </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/testimonials/testimonials-2.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
                   </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Enim nisi quem export duis labore cillum quae magna
-                            enim sint quorum nulla quem veniam duis minim tempor
-                            labore quem eram duis noster aute amet eram fore
-                            quis sint minim.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/testimonials/testimonials-3.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <div class="row gy-4 justify-content-center">
-                    <div class="col-lg-6">
-                      <div class="testimonial-content">
-                        <p>
-                          <i class="bi bi-quote quote-icon-left"></i>
-                          <span
-                            >Fugiat enim eram quae cillum dolore dolor amet
-                            nulla culpa multos export minim fugiat minim velit
-                            minim dolor enim duis veniam ipsum anim magna sunt
-                            elit fore quem dolore labore illum veniam.</span
-                          >
-                          <i class="bi bi-quote quote-icon-right"></i>
-                        </p>
-                        <h3>John Larson</h3>
-                        <h4>Entrepreneur</h4>
-                        <div class="stars">
-                          <i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i
-                          ><i class="bi bi-star-fill"></i>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-2 text-center">
-                      <img
-                        src="assets/img/testimonials/testimonials-4.jpg"
-                        class="img-fluid testimonial-img"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End testimonial item -->
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-      </section>
-      <!-- /Testimonials Section -->
-
-      <!-- Contact Section -->
-      <section id="contact" class="contact section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2>Contact</h2>
-          <p>
-            Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-            consectetur velit
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container" data-aos="fade" data-aos-delay="100">
-          <div class="row gy-4">
-            <div class="col-lg-4">
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Address</h3>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                <i class="bi bi-telephone flex-shrink-0"></i>
-                <div>
-                  <h3>Call Us</h3>
-                  <p>+1 5589 55488 55</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-
-              <div
-                class="info-item d-flex"
-                data-aos="fade-up"
-                data-aos-delay="400"
-              >
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>info@example.com</p>
-                </div>
-              </div>
-              <!-- End Info Item -->
-            </div>
-
-            <div class="col-lg-8">
-              <form
-                action="forms/contact.php"
-                method="post"
-                class="php-email-form"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              >
-                <div class="row gy-4">
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      class="form-control"
-                      placeholder="Your Name"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-6">
-                    <input
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      placeholder="Your Email"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="subject"
-                      placeholder="Subject"
-                      required=""
-                    />
-                  </div>
-
-                  <div class="col-md-12">
+                  <div class="mb-6">
+                    <label
+                      for="message"
+                      class="block text-sm font-medium text-gray-700 mb-2"
+                      >Message</label
+                    >
                     <textarea
-                      class="form-control"
+                      id="message"
                       name="message"
-                      rows="6"
-                      placeholder="Message"
-                      required=""
+                      rows="4"
+                      class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded text-gray-800"
+                      placeholder="Tell me about your project..."
                     ></textarea>
                   </div>
-
-                  <div class="col-md-12 text-center">
-                    <div class="loading">Loading</div>
-                    <div class="error-message"></div>
-                    <div class="sent-message">
-                      Your message has been sent. Thank you!
-                    </div>
-
-                    <button type="submit">Send Message</button>
+                  <div class="flex items-center mb-6">
+                    <input
+                      type="checkbox"
+                      id="newsletter"
+                      name="newsletter"
+                      class="custom-checkbox"
+                    />
+                    <label for="newsletter" class="ml-2 text-sm text-gray-600"
+                      >Subscribe to my newsletter for design tips and
+                      updates</label
+                    >
                   </div>
-                </div>
-              </form>
+                  <button
+                    type="submit"
+                    class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap hover:bg-indigo-600 transition-colors font-medium"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
             </div>
-            <!-- End Contact Form -->
           </div>
         </div>
-      </section>
-      <!-- /Contact Section -->
-    </main>
-
-    <footer id="footer" class="footer position-relative light-background">
-      <div class="container">
-        <h3 class="sitename">Brandon Johnson</h3>
-        <p>
-          Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni
-          eligendi fuga maxime saepe commodi placeat.
-        </p>
-        <div class="social-links d-flex justify-content-center">
-          <a href=""><i class="bi bi-twitter-x"></i></a>
-          <a href=""><i class="bi bi-facebook"></i></a>
-          <a href=""><i class="bi bi-instagram"></i></a>
-          <a href=""><i class="bi bi-skype"></i></a>
-          <a href=""><i class="bi bi-linkedin"></i></a>
-        </div>
-        <div class="container">
-          <div class="copyright">
-            <span>Copyright</span>
-            <strong class="px-1 sitename">Alex Smith</strong>
-            <span>All Rights Reserved</span>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row justify-between items-center mb-8"
+        >
+          <a href="#" class="text-2xl font-['Pacifico'] text-white mb-6 md:mb-0"
+            >MQ</a
+          >
+          <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+            <a
+              href="#home"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-300 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-300 hover:text-white transition-colors"
+              >Contact</a
+            >
           </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+          <div class="flex space-x-4 mt-6 md:mt-0">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+            >
+              <i class="ri-linkedin-fill text-white"></i>
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+            >
+              <i class="ri-instagram-line text-white"></i>
+            </a>
+            <a
+              href="https://behance.net"
+              target="_blank"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+            >
+              <i class="ri-behance-fill text-white"></i>
+            </a>
+            <a
+              href="https://dribbble.com"
+              target="_blank"
+              class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+            >
+              <i class="ri-dribbble-line text-white"></i>
+            </a>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 text-sm mb-4 md:mb-0">
+              &copy; 2025 Muqeeem Quazi. All rights reserved.
+            </p>
+            <div class="flex flex-col md:flex-row items-center">
+              <div class="flex space-x-4 mb-4 md:mb-0 md:mr-8">
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white text-sm transition-colors"
+                  >Privacy Policy</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white text-sm transition-colors"
+                  >Terms of Service</a
+                >
+              </div>
+              <div class="flex items-center">
+                <form class="flex">
+                  <input
+                    type="email"
+                    placeholder="Subscribe to newsletter"
+                    class="px-4 py-2 w-full md:w-auto bg-gray-800 border-none rounded-l text-sm text-white placeholder-gray-400"
+                  />
+                  <button
+                    type="submit"
+                    class="bg-primary px-4 py-2 !rounded-r-button whitespace-nowrap text-sm"
+                  >
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </footer>
-
-    <!-- Scroll Top -->
     <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+      href="#home"
+      id="back-to-top"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300"
+    >
+      <i class="ri-arrow-up-line text-xl"></i>
+    </a>
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenu = document.getElementById("close-menu");
+        hamburgerMenu.addEventListener("click", function () {
+          mobileMenu.classList.remove("translate-x-full");
+        });
+        closeMenu.addEventListener("click", function () {
+          mobileMenu.classList.add("translate-x-full");
+        });
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("translate-x-full");
+          });
+        });
+      });
+    </script>
+    <script id="project-filter-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => {
+              btn.classList.remove("active", "bg-primary", "text-white");
+              btn.classList.add("text-gray-700");
+            });
+            // Add active class to clicked button
+            this.classList.add("active", "bg-primary", "text-white");
+            this.classList.remove("text-gray-700");
+            // Here you would normally filter the projects
+            // For this demo, we're just changing the button state
+          });
+        });
+      });
+    </script>
+    <script id="back-to-top-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const backToTopButton = document.getElementById("back-to-top");
+        const logoLink = document.getElementById("logo-link");
+        const scrollToTop = (e) => {
+          e.preventDefault();
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        };
+        window.addEventListener("scroll", function () {
+          if (window.pageYOffset > 300) {
+            backToTopButton.classList.remove("opacity-0", "invisible");
+            backToTopButton.classList.add("opacity-100", "visible");
+          } else {
+            backToTopButton.classList.remove("opacity-100", "visible");
+            backToTopButton.classList.add("opacity-0", "invisible");
+          }
+        });
+        backToTopButton.addEventListener("click", scrollToTop);
+        logoLink.addEventListener("click", scrollToTop);
+      });
+    </script>
+    <script id="form-validation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Simple validation
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const projectType = document.getElementById("project-type").value;
+          const message = document.getElementById("message").value;
+          let isValid = true;
+          if (!name) {
+            isValid = false;
+            document.getElementById("name").classList.add("border-red-500");
+          } else {
+            document.getElementById("name").classList.remove("border-red-500");
+          }
+          if (!email || !email.includes("@")) {
+            isValid = false;
+            document.getElementById("email").classList.add("border-red-500");
+          } else {
+            document.getElementById("email").classList.remove("border-red-500");
+          }
+          if (!projectType) {
+            isValid = false;
+            document
+              .getElementById("project-type")
+              .classList.add("border-red-500");
+          } else {
+            document
+              .getElementById("project-type")
+              .classList.remove("border-red-500");
+          }
+          if (!message) {
+            isValid = false;
+            document.getElementById("message").classList.add("border-red-500");
+          } else {
+            document
+              .getElementById("message")
+              .classList.remove("border-red-500");
+          }
+          if (isValid) {
+            // Form is valid, you would normally submit it here
+            alert("Thank you for your message! I will get back to you soon.");
+            contactForm.reset();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
